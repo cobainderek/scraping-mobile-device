@@ -1,0 +1,36 @@
+# Regras udev para leitura de smartphones Android sem sudo.
+# Instalar em /etc/udev/rules.d/51-android-inventario.rules
+# Permite acesso (grupo plugdev) a /dev/bus/usb/* dos fabricantes abaixo.
+
+# Samsung
+SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# LG
+SUBSYSTEM=="usb", ATTR{idVendor}=="1004", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# Motorola
+SUBSYSTEM=="usb", ATTR{idVendor}=="22b8", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# Xiaomi
+SUBSYSTEM=="usb", ATTR{idVendor}=="2717", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# Asus
+SUBSYSTEM=="usb", ATTR{idVendor}=="0b05", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# Google
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# Huawei
+SUBSYSTEM=="usb", ATTR{idVendor}=="12d1", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# OnePlus
+SUBSYSTEM=="usb", ATTR{idVendor}=="2a70", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# Sony
+SUBSYSTEM=="usb", ATTR{idVendor}=="0fce", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# HTC
+SUBSYSTEM=="usb", ATTR{idVendor}=="0bb4", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# Oppo
+SUBSYSTEM=="usb", ATTR{idVendor}=="22d9", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# Vivo
+SUBSYSTEM=="usb", ATTR{idVendor}=="2d95", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# ZTE
+SUBSYSTEM=="usb", ATTR{idVendor}=="19d2", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# Lenovo
+SUBSYSTEM=="usb", ATTR{idVendor}=="17ef", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# Nokia/HMD
+SUBSYSTEM=="usb", ATTR{idVendor}=="2e04", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# Alcatel/TCL
+SUBSYSTEM=="usb", ATTR{idVendor}=="1bbb", MODE="0660", GROUP="plugdev", TAG+="uaccess"
